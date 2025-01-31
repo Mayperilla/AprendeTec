@@ -6,6 +6,35 @@
 * License: https://bootstrapmade.com/license/
 */
 
+/* whatsapp icon */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25d366; /* Color de WhatsApp */
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  padding: 10px; /* Espacio interno del círculo */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Tamaño del círculo */
+  height: 40px; /* Tamaño del círculo */
+}
+
+.whatsapp-icon:hover {
+  background-color: #1c7268; /* Cambia el color al pasar el mouse */
+}
+
+.whatsapp-icon img {
+  width: 60px; /* Tamaño del ícono */
+  height: 60px; /* Tamaño del ícono */
+}
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
