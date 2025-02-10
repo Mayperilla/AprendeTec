@@ -8,10 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-  permissions:
-  contents: write
-
+    permissions:
+      contents: write  # ✅ Permiso para escribir en el repo
 
     steps:
       - name: Checkout repository
@@ -20,7 +18,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'  # Cambia la versión de Ruby
+          ruby-version: '3.1'  # Cambia la versión de Ruby si es necesario
 
       - name: Install dependencies
         run: |
@@ -33,6 +31,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-        personal_token: ${{ secrets.GH_PAT }}
+          personal_token: ${{ secrets.GH_PAT }}  # ✅ Ahora usa un PAT con permisos
           publish_dir: ./_site
-
